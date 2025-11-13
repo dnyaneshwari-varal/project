@@ -37,6 +37,10 @@ html{
 
 body{
     background: #eee;
+    margin: 0;
+    padding: 0;
+  
+    overflow-x: hidden;
 }
 .header{
     text-decoration: none;
@@ -373,5 +377,160 @@ label{
   color: white;
 }
 
+/* ✅ Dropdown in header nav */
+.nav-select {
+  border: none;
+  background: transparent;
+  color: #0b043b;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  appearance: none;  /* removes default styling and big arrow */
+  outline: none;
+}
+
+.nav-select:hover {
+  color: var(--green);
+}
+
+.nav-select option {
+  color: var(--black);
+  background-color: #fff;
+}
 
 
+/* cart */
+/* Sidebar Container */
+.cart-sidebar {
+    position: fixed;
+    top: 10px;
+    right: -380px;        /* hidden by default */
+    width: 360px;
+    height: calc(100% - 20px);
+    background: linear-gradient(145deg, #fefefe, #e6f0ff); /* soft gradient */
+    border-radius: 20px;   /* rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* depth */
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 50px;
+    margin-bottom: 80px;
+}
+
+.cart-sidebar.show {
+    right: 10px;  /* slide in with margin from screen edge */
+
+}
+
+/* Sidebar Title */
+.cart-sidebar h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+   
+}
+
+/* Cart Item Box */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Product Image */
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+/* Product Info */
+.item-info {
+    flex: 1;
+    margin-right: 10px;
+   
+}
+
+.item-info span {
+    display: block;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Actions Buttons */
+.item-actions button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #6a5af9, #43e97b);
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.item-actions button:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* Total Section */
+#cartTotal {
+    border-top: 2px solid #ccc;
+    padding-top: 15px;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Close Button */
+#closeCart {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff5858, #f09819);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+#closeCart:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Scrollbar Style */
+.cart-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-sidebar::-webkit-scrollbar-thumb {
+    background: #6a5af9;
+    border-radius: 10px;
+}
+
+.cart-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
