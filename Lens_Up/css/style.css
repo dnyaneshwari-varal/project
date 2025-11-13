@@ -1,78 +1,166 @@
-/* --- Global --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital, wght@20,400;0,500;1,300&display=swap');
+
+:root{
+    --green:green;
+    --black:#130f40;
+    --light-color:#7d7b7b;
+    --box-shadow:0 .2rem 1rem rgb(120, 117, 117) ;
+    --img-shadow:0 .2rem 1rem rgb(254, 247, 247) ;
+    
+    --box-border: 2rem solid 1rem rgba(0,0,0.1);
+    --outline: .1rem solid 1rem rgba(0,0,0.1);
+    --grey:grey;
 }
 
-body {
-  background-color: #f6f6f6;
+
+
+
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+ 
+    text-transform: capitalize;
+    transition:all .2s linear;
 }
 
-/* --- Navbar --- */
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:7rem;
 
-/* #navbar{
-    background-color: black;
+}
+
+body{
+    background: #eee;
+}
+.header{
+    text-decoration: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:var(--black);
+}    
+
+a:hover{
+    color:var(--green);
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+}
+i{
+    color:var(--green);
+}
+
+.icons div{ 
+    /* border:1px solid; */
+    border-radius: 2px;
+    background-color: #eee;
+    color: var(--black);
+    height: 40px;
+    width:40px;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+
+}
+.icons div:hover{
+    background-color: var(--green);
     color: white;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.search-form{
+    border: 0px solid black;
+    border-radius: .5rem;
+    position: absolute;
+    top: 110%;
+    right: -110%; 
+    width: 40rem;
+    height: 4rem;
+    background:#fff ;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    font-size: 2rem;
+   
+
+}
+.search-form.active{
+    right: 2rem; 
+    transition: .4s linear;
+    
+}
+
+input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 2rem;
+    color: var(--black);
+    padding: 0 1rem;
+}
+
+#search-box{
+    font-size: 1.5rem;
+}
+label{
+    font-size: 4rem;
+    padding-right:1.5rem ;
+     cursor: pointer;
+     
+
+} 
+
+
+
+
+
+/*carousel */
+/* .carousel slide mt-3{
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+
 } */
-nav {
-  width: 100%;
-  background-color: green;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
 
-.menu-icon {
-  font-size: 26px;
-  cursor: pointer;
+.carousel-inner{
+   padding-bottom: 2rem;
+  /* margin-bottom: 100px; */
 }
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #444;
-  flex: 1;
-  text-align: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #444;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #7b4ae2;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.icons i:hover {
-  color: #7b4ae2;
-}
+  
 
 /* --- Slider --- */
 .slider-img {
   height: 400px;
   object-fit: cover;
   border-radius: 12px;
+  width: 400px;
 }
 
 /* --- Section Label --- */
@@ -126,7 +214,8 @@ nav {
 
 .box p {
   margin: 10px 0;
-  font-weight: 500;
+  font-weight: 800;
+  font-size: 15px;
 }
 
 /* --- Arrows --- */
@@ -157,3 +246,132 @@ nav {
   background-color: #6a0dad;
   color: white;
 }
+
+
+.heading{
+  text-align: center;
+  font-size: 3rem;
+  color:var(--black);
+  
+
+}
+.heading span{
+  background-color: var(--grey);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  clip-path:polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+  
+}
+.box-cont1{
+  height: 280px;
+  /* width:100%; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 300px;
+  padding-right: 300px;
+  display: flex;
+  margin-bottom: 2rem;
+  
+ 
+  
+}
+.box{
+  height: 250px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  margin-right: 30px;
+  display: inline-block;
+
+}
+
+/* .wrapper{
+  height: 280px;
+  width:100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 40px;
+  padding-right: 50px;
+  display: flex;
+  margin-bottom: 2rem;
+} */
+
+.wrapper {
+  
+  display: flex;
+  justify-content: center;    /* centers all boxes */
+  align-items: center;
+  flex-wrap: wrap;            /* moves boxes to next line if needed */
+  gap: 30px;                  /* space between boxes */
+  padding: 2rem 0;
+
+  
+}
+.wrapper img {
+  width: 80%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+  box-shadow: white;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  box-shadow: var(--img-shadow);
+}
+
+.box2:hover img {
+  transform: scale(1.08);
+}
+
+
+.box2{
+  color:black;
+  width: 300px;
+  background-color:rgb(223, 222, 222);
+  height: 335px;
+  /* padding: 15px 25px; */
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  margin-right: 30px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+}
+
+/* .box2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+} */
+.strats{
+  margin-bottom: 2px;
+}
+
+
+
+/* button */
+.btn {
+  width: 60%;
+  border: 2px  black;
+  background-color:rgb(234, 234, 234);
+  color:green;
+  
+  padding: 5px 10px;
+  border-radius: 10px;
+  padding-bottom: 0.5px;        /* curved edges */
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+ 
+
+}
+
+.btn:hover {
+  background-color:green;  /* darker lavender */
+  transform: scale(1.05);
+  color: white;
+}
+
+
+
