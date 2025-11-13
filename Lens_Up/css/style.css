@@ -42,6 +42,12 @@ body{
   
     overflow-x: hidden;
 }
+
+section {
+  scroll-margin-top: 80px; /* adjust based on header height */
+}
+
+
 .header{
     text-decoration: none;
     position: fixed;
@@ -533,4 +539,101 @@ label{
 
 .cart-sidebar::-webkit-scrollbar-track {
     background: #f1f1f1;
+}
+
+
+
+/*about us*/
+
+.about-section {
+  
+  /* padding: 80px 10%; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+  text-align: center;
+}
+
+.about-section .heading {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+
+/* footer */
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #1e1e2f, #343a40);
+  color: #fff;
+  padding: 50px 10% 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-box {
+  max-width: 400px;
+}
+
+.footer-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-left: 4px solid #43e97b;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.footer-box p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
 }
