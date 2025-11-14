@@ -29,62 +29,73 @@
         <a href="#features" class="scroll-link" style="text-decoration: none;">Features</a>
         <a href="#products" class="scroll-link" style="text-decoration: none;">Products</a>
         <a href="#about" class="scroll-link" style="text-decoration: none;">About us</a>
+        <a href="#feedback-display" class="scroll-link" style="text-decoration: none;">Review</a>
 
         <select id="categorySelect" class="nav-select">
                 <option value="" selected disabled>Categories ▼</option>
-                <option value="home.html">🏠 Home</option>
-                <option value="square.html">⬛ Square Shape</option>
+                <option value="home.html"> Home</option>
+                <option value="square.html">🕶 Square Shape</option>
                 <option value="retro.html">🕶️ Retro Sunglasses</option>
         </select>  
      </nav>
 
     <div class="icons"> 
         <div class="fa fa-bars" id="menu-btn"></div>
-        <div class="fa fa-search" id="search-btn"></div>
+        <!-- <div class="fa fa-search" id="search-btn"></div> -->
         <div class="fa fa-shopping-cart" id="cart-btn" ></div>
         
         <div class="fa fa-user" id="login-btn"></div>
     </div>
 
-    <form class="search-form">
+    <!-- <form class="search-form">
         <input type="search" id="search-box" placeholder="Search Hear..">
         <label for="search-box" class="fa fa-search"></label>
 
-    </form>
+    </form> -->
   </header>
 
   <br><br><br><br><br><br>
   <!-- Top Carousel Slider -->
-  <div id="carouselExample" class="carousel slide mt-3" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../images/s1.jpg" class="d-block w-100 slider-img" alt="Slide 1">
-      </div>
-      <div class="carousel-item">
-        <img src="../images/s2.jpg" class="d-block w-100 slider-img" alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img src="../images/s3.jpg" class="d-block w-100 slider-img" alt="Slide 3">
-      </div>
-      <div class="carousel-item">
-        <img src="../images/s4.jpg" class="d-block w-100 slider-img" alt="Slide 4">
-      </div>
-      <div class="carousel-item">
-        <img src="../images/s5.jpg" class="d-block w-100 slider-img" alt="Slide 5">
-      </div>
-      <div class="carousel-item">
-        <img src="../images/s6.jpg" class="d-block w-100 slider-img" alt="Slide 6">
-      </div>
+<div id="carouselExample" class="carousel slide mt-3" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- Video Slide -->
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop playsinline style="object-fit: cover; height: 100vh;">
+        <source src="../images/for_page.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop playsinline style="object-fit: cover; height: 100vh;">
+        <source src="../images/video4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop playsinline style="object-fit: cover; height: 100vh;">
+        <source src="../images/video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop playsinline style="object-fit: cover; height: 100vh;">
+        <source src="../images/video5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
 
-    <!-- Carousel Arrows -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
+
+  <!-- Carousel Arrows -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
  
   <!-- Shop By Shape Section -->
  
@@ -95,12 +106,19 @@
   <div class="box-section position-relative px-3">
     <button class="arrow left">&#10094;</button>
     <div class="box-container d-flex overflow-hidden" id="boxContainer">
-      <div class="box"><img src="../images/s1.jpg" alt=""><p>Classic Frame</p></div>
-      <div class="box"><img src="../images/s2.jpg" alt=""><p>Trendy Shades</p></div>
-      <div class="box"><img src="../images/s3.jpg" alt=""><p>Round Spectacles</p></div>
-      <div class="box"><img src="../images/s4.jpg" alt=""><p>Cat Eye Style</p></div>
-      <div class="box"><img src="../images/s5.jpg" alt=""><p>Modern Look</p></div>
-      <div class="box"><img src="../images/s6.jpg" alt=""><p>Minimal Glasses</p></div>
+      <div class="shape-box" onclick="location.href='retro.html'">
+            <img src="../images/retro1.jpeg" alt="">
+            <p>Retro Frames</p>
+        </div>
+
+        <div class="shape-box" onclick="location.href='square.html'">
+            <img src="../images/s3.jpg" alt="">
+            <p>Square Frames</p>
+        </div>
+      <div class="shape-box"><img src="../images/s2.jpg" alt=""><p>Round Spectacles</p></div>
+      <div class="shape-box"><img src="../images/s4.jpg" alt=""><p>Cat Eye Style</p></div>
+      <div class="shape-box"><img src="../images/s5.jpg" alt=""><p>Modern Look</p></div>
+      <div class="shape-box"><img src="../images/s6.jpg" alt=""><p>Minimal Glasses</p></div>
     </div>
     <button class="arrow right">&#10095;</button>
   </div>
@@ -167,7 +185,7 @@
           <div class="box2">
               <img src="../images/g3.jpeg" >
               <h2>Rectangle Sunglass</h2>
-              <div class="price">₹999/-</div>
+              <div class="price">₹1200/-</div>
               <div class="strats">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -176,7 +194,7 @@
               </div>
               <a href="#" class="btn add-to-cart" 
                     data-name="Rectangle Sunglass" 
-                    data-price="999" 
+                    data-price="1200" 
                      data-image="../images/g3.jpeg">Add to cart
               </a>
 
@@ -184,7 +202,7 @@
           <div class="box2">
               <img src="../images/g4.jpeg" >
               <h2>Rectangle Sunglass</h2>
-              <div class="price">₹999/-</div>
+              <div class="price">₹859/-</div>
               <div class="strats">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -193,7 +211,7 @@
               </div>
               <a href="#" class="btn add-to-cart" 
                     data-name="Rectangle Sunglass" 
-                    data-price="999" 
+                    data-price="859" 
                      data-image="../images/g4.jpeg">Add to cart
               </a>
 
@@ -205,7 +223,7 @@
           <div class="box2">
               <img src="../images/g5.jpeg" >
               <h2>Rectangle Sunglass</h2>
-              <div class="price">₹999/-</div>
+              <div class="price">₹1500/-</div>
               <div class="strats">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -214,7 +232,7 @@
               </div>
               <a href="#" class="btn add-to-cart" 
                     data-name="Rectangle Sunglass" 
-                    data-price="999" 
+                    data-price="1500" 
                      data-image="../images/g5.jpeg">Add to cart
               </a>
 
@@ -222,7 +240,7 @@
           <div class="box2">
               <img src="../images/g6.jpeg" >
               <h2>Rectangle Sunglass</h2>
-              <div class="price">₹999/-</div>
+              <div class="price">₹950/-</div>
               <div class="strats">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -231,7 +249,7 @@
               </div>
               <a href="#" class="btn add-to-cart" 
                     data-name="Rectangle Sunglass" 
-                    data-price="999" 
+                    data-price="950" 
                      data-image="../images/g6.jpeg">Add to cart
               </a>
 
@@ -268,6 +286,7 @@
     <div id="cartItems"></div>
     <h3 id="totalPrice">Total: ₹0</h3>
     <button id="closeCart">Close Cart</button>
+    <button id="checkoutBtn" class="checkout-btn">Checkout</button>
 </div>
 
 
@@ -288,6 +307,75 @@
         Our goal is to provide high-quality products at affordable prices while ensuring
         a seamless shopping experience for our customers.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- login -->
+
+<!-- LOGIN POPUP -->
+<div id="loginPopup" class="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+    <h2>Login</h2>
+
+    <input type="email" id="loginEmail" placeholder="Enter Email">
+    <input type="password" id="loginPass" placeholder="Enter Password">
+
+    <button onclick="submitLogin()">Login</button>
+
+    <p class="switch-text">
+      Don’t have an account?
+      <span onclick="openRegister()">Register</span>
+    </p>
+  </div>
+</div>
+
+<!-- REGISTER POPUP -->
+<div id="registerPopup" class="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closeRegister()">&times;</span>
+    <h2>Register</h2>
+
+    <input type="text" id="regName" placeholder="Full Name">
+    <input type="email" id="regEmail" placeholder="Enter Email">
+    <input type="password" id="regPass" placeholder="Create Password">
+
+    <button onclick="submitRegister()">Register</button>
+
+    <p class="switch-text">
+      Already have an account?
+      <span onclick="openLogin()">Login</span>
+    </p>
+  </div>
+</div>
+
+
+
+<!-- Feedback Display Section -->
+<section id="feedback-display" class="feedback-display mt-5">
+  <div class="container">
+    <h2 class="feedback-heading">What Our Users Say</h2>
+    <div class="feedback-cards d-flex flex-wrap justify-content-center gap-3">
+
+      <!-- Single Feedback Card -->
+      <div class="feedback-card">
+        <p class="feedback-message">"Great service and amazing products!"</p>
+        <h4 class="feedback-user">– Shivani V.</h4>
+      </div>
+
+      <div class="feedback-card">
+        <p class="feedback-message">"Fast delivery and excellent quality."</p>
+        <h4 class="feedback-user">– Rahul S.</h4>
+      </div>
+
+      <div class="feedback-card">
+        <p class="feedback-message">"Loved the variety of frames available."</p>
+        <h4 class="feedback-user">– Priya M.</h4>
+      </div>
+
+      <!-- Add more feedback cards dynamically if needed -->
+
     </div>
   </div>
 </section>
